@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+
+
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
+  <meta name="X-UA-Compatible" content="IE=edge">
+  <title>Alexandra Vlasenko</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Source+Serif+Pro:700,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:700' rel='stylesheet' type='text/css'>
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+
+  <!-- modernizer -->
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+</head>
+
+
+<body>
+
+
+<section class="section--first section--frontpage">
+  <div class="section-title">
+    <div class="container">
+      <h1 class="textLogo textLogo--frontpage">
+        Alexandra Vlasenko
+      </h1>
+      <div class="postMeta-wrapper postMeta-wrapper--frontpage">
+        <ul class="postMeta">
+          <li class="postMeta-tagline">
+            a minimal theme for Jekyll
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section--postsWrapper">
+  <div class="container">
+    <div class="blockGroup">
+      <ul class="blockGroup-list">
+        
+        <li class="block">
+          <div class="postArticle-wrapper">
+            <article class="postArticle postArticle--short">
+              
+              <a href="/post1.html">
+                <div class="postArticle-image desaturate" style="background-image:url('/assets/images/hero/walt-disney.jpg')"> <!-- | prepend -->
+                </div>
+              </a>
+              
+              <a class="postArticle-title" href="/post1.html">17 Lessons I&#39;ve Learned Working at a Growing Startup</a>
+            </article>
+            <div class="block-postMeta">08 Jul 2015</div>
+          </div>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section--subscribe">
+  <div class="container container--content">
+    <h3 class="u-alignCenter">Stay in touch</h3>
+    <p>
+      Привет! Я Александра Власенко.
+      Hi, I'm <a href="/about">Alexandra Vlasenko</a>. A short description of your blog.
+      Mickey is a minimal one-column theme for Jekyll. It's designed and developed by
+      <a href="http://github.com/vincentchan" target="_blank">@VincentChan</a>.
+    </p>
+    <div class="newsletterForm-wrapper">
+      <div id="mc_embed_signup">
+        <form action="mailchimp" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group">
+              <input type="email" value="" name="EMAIL" class="textInput textInput--large" id="mce-EMAIL" placeholder="Your email address">
+            </div>
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="mailchimp" tabindex="-1" value=""></div>
+            <div class="clear u-alignCenter">
+              <input type="submit" value="Get new blog posts by email" name="subscribe" id="mc-embedded-subscribe" class="button button--primary">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <hr/>
+  </div>
+</section>
+
+
+<footer class="section--footer">
+  <div class="container container--content">
+    <div>
+      <a href="/humans.txt">Hand-crafted</a> by <a href="/about">Your Name</a>
+    </div>
+    <ul class="socialAccountList">
+      <li><a href="http://twitter.com/sasha" class="socialAccount socialAccount--twitter" target="_blank"></a></li>
+      <li><a href="http://facebook.com/sasha" class="socialAccount socialAccount--facebook" target="_blank"></a></li>
+      <!--
+      <li><a href="http://www.linkedin.com/in/" class="socialAccount socialAccount--linkedin" target="_blank"></a></li>
+      <li><a href="http://dribbble.com/" class="socialAccount socialAccount--dribbble" target="_blank"></a></li>
+      <li><a href="https://www.pinterest.com//" class="socialAccount socialAccount--pinterest" target="_blank"></a></li>
+      <li><a href="http://www.kiva.org/lender/" class="socialAccount socialAccount--kiva" target="_blank"></a></li>
+      <li><a href="" class="socialAccount socialAccount--rss" target="_blank"></a></li>
+      -->
+    </ul>
+    <div>
+      © 2015 All Rights Reserved. Powered by the <a href="https://github.com/vincentchan/mickey" target="_blank">Mickey theme</a> for Jekyll.
+    </div>
+  </div>
+</footer>
+
+
+<!-- Javascript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/assets/javascripts/imagesloaded.pkgd.min.js"></script>
+
+
+
+<script>
+  $(document).ready(function(){
+
+    // Featured image loaded behavior
+    $('.section-backgroundImage img').imagesLoaded()
+      .done( function( instance ) {
+        $('.post-featuredImage').addClass('is-loaded');
+      });
+
+    // Modal toggle behavior
+    $('.modal-toggle-wrapper').click(function() {
+    	$(this).toggleClass('active');
+      $('.modal-toggle-bubble').toggleClass('active');
+    	$('.modal-toggle-bubbleShadow').toggleClass('active');
+      $('.modal-toggle-close-wrapper').toggleClass('active');
+      $('.fullscreenModal').toggleClass('active');
+    });
+
+    // Prevent default anchor event and make a share popup
+    $.fn.sharePopup = function (e, intWidth, intHeight, blnResize) {
+
+      e.preventDefault();
+      intWidth = intWidth || '750';
+      intHeight = intHeight || '500';
+      strResize = (blnResize ? 'yes' : 'no');
+
+      //// Set title and open popup with focus on it
+      var strTitle = ((typeof this.attr('title') !== 'undefined') ? this.attr('title') : 'Social Share'),
+          strParam = 'width=' + intWidth + ',height=' + intHeight + ',resizable=' + strResize,
+          objWindow = window.open(this.attr('href'), strTitle, strParam).focus();
+    }
+
+    $('.shareButton').on("click", function(e) {
+      $(this).sharePopup(e);
+    });
+  });
+
+  // Show modal toggle after scrolling 300px
+  $(document).scroll(function() {
+    $('.modal-toggle-group').toggleClass('active', $(document).scrollTop() >= 300);
+  });
+</script>
+
+
+</body>
+</html>
